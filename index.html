@@ -1,10 +1,387 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mi Página</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>C03E | Red Team Operator</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:'Share Tech Mono', monospace;
+    overflow-x:hidden;
+}
+
+/* MATRIX BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at center, rgba(255,0,0,0.08), transparent 70%);
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,0,0,0.2);
+    position:sticky;
+    top:0;
+    background:#050505;
+    z-index:999;
+}
+
+.logo{
+    color:#ff0000;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff0000;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:70px;
+    color:#ff0000;
+    margin-bottom:10px;
+}
+
+.hero-text h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#b5b5b5;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btns{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:1px solid #ff0000;
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff0000;
+    box-shadow:0 0 20px #ff0000;
+}
+
+/* TERMINAL */
+
+.terminal{
+    background:#0d0d0d;
+    border:1px solid rgba(255,0,0,0.4);
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 30px rgba(255,0,0,0.1);
+}
+
+.terminal-header{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+}
+
+.red{background:#ff4d4d;}
+.yellow{background:#ffc107;}
+.green{background:#28a745;}
+
+.command{
+    color:#00ff66;
+    margin-bottom:10px;
+}
+
+.output{
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 50px;
+}
+
+.section-title{
+    font-size:40px;
+    color:#ff0000;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#0b0b0b;
+    border:1px solid rgba(255,0,0,0.2);
+    padding:30px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#ff0000;
+    box-shadow:0 0 20px rgba(255,0,0,0.3);
+}
+
+.card h3{
+    color:#ff0000;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(255,0,0,0.2);
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content{
+    grid-template-columns:1fr;
+}
+
+.hero-text h1{
+    font-size:50px;
+}
+
+}
+
+</style>
 </head>
 <body>
-  <h1>Hola 👋</h1>
-  <p>Mi sitio web en GitHub Pages.</p>
+
+<nav>
+    <div class="logo">C03E@redteam:~$</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h2>Hello, I'm</h2>
+<h1>C03E</h1>
+
+<p>
+Red Team Operator | Pentester | Offensive Security Enthusiast.
+Specialized in web exploitation, Active Directory attacks,
+OSINT and adversary simulation.
+</p>
+
+<div class="btns">
+<a href="#projects" class="btn">VIEW PROJECTS</a>
+<a href="#about" class="btn">ABOUT ME</a>
+</div>
+
+</div>
+
+<div class="terminal">
+
+<div class="terminal-header">
+<div class="dot red"></div>
+<div class="dot yellow"></div>
+<div class="dot green"></div>
+</div>
+
+<div class="command">
+c03e@redteam:~$ whoami
+</div>
+
+<div class="output">
+red team operator <br>
+security researcher <br>
+bug bounty learner <br><br>
+
+mission: secure the digital world
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">SKILLS</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Web Exploitation</h3>
+<p>
+OWASP, XSS, SQLi, SSRF, IDOR, Authentication flaws,
+API security testing.
+</p>
+</div>
+
+<div class="card">
+<h3>Active Directory</h3>
+<p>
+Privilege escalation, Kerberoasting, BloodHound,
+lateral movement and persistence.
+</p>
+</div>
+
+<div class="card">
+<h3>OSINT</h3>
+<p>
+Reconnaissance, metadata analysis,
+social footprinting and intelligence gathering.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">PROJECTS</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Red Team Toolkit</h3>
+<p>
+Custom scripts and automation for offensive security assessments.
+</p>
+</div>
+
+<div class="card">
+<h3>AD Pentest Lab</h3>
+<p>
+Simulated enterprise environment for Active Directory attacks.
+</p>
+</div>
+
+<div class="card">
+<h3>Web Security Research</h3>
+<p>
+Researching vulnerabilities in modern web applications and APIs.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">ABOUT ME</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Operator Profile</h3>
+
+<p>
+Cybersecurity enthusiast focused on offensive security,
+red teaming and adversary simulation.
+</p>
+
+<br>
+
+<p>
+"Offense is the best defense."
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+C03E © 2026 | Red Team Operator
+
+</footer>
+
 </body>
 </html>
