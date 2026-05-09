@@ -1,77 +1,256 @@
+<!-- index.html -->
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red Team Portfolio</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="top-left">
+      <span class="logo-text">c03e@redteam:~$</span>
+    </div>
+
+    <div class="top-center">
+      [ RED TEAM OPERATOR ]
+    </div>
+
+    <div class="top-right">
+      <span>GitHub</span>
+      <span>LinkedIn</span>
+      <span>Mail</span>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="profile-box">
+        <div class="profile-image"></div>
+
+        <h1>C03E</h1>
+        <p>RED TEAM OPERATOR</p>
+      </div>
+
+      <nav class="menu">
+        <a class="active" href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SKILLS</a>
+        <a href="#">PROJECTS</a>
+        <a href="#">WRITEUPS</a>
+        <a href="#">TOOLS</a>
+        <a href="#">CONTACT</a>
+      </nav>
+
+      <div class="terminal-status">
+        >> Access granted
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <div class="hero-left">
+
+          <h2>Hello, I'm</h2>
+
+          <h1>C03E_</h1>
+
+          <h3>
+            Red Team Operator |
+            <span>Penetration Tester</span>
+          </h3>
+
+          <p>
+            Offensive security specialist focused on
+            adversary simulation and advanced testing.
+          </p>
+
+          <div class="hero-buttons">
+            <button>VIEW PROJECTS</button>
+            <button class="secondary">CONTACT ME</button>
+          </div>
+
+        </div>
+
+        <div class="hero-center">
+          <!-- MAP / IMAGE -->
+        </div>
+
+        <div class="hero-right">
+
+          <div class="card">
+            <h3>// SKILLS</h3>
+
+            <div class="skill">
+              <span>Web Exploitation</span>
+              <div class="bar"><div style="width:90%"></div></div>
             </div>
 
             <div class="skill">
-                <div class="skill-top">
-                    <span>Privilege Escalation</span>
-                    <span>80%</span>
-                </div>
-                <div class="bar"><div style="width:80%"></div></div>
+              <span>Network Exploitation</span>
+              <div class="bar"><div style="width:85%"></div></div>
             </div>
 
             <div class="skill">
-                <div class="skill-top">
-                    <span>Red Team Operations</span>
-                    <span>95%</span>
-                </div>
-                <div class="bar"><div style="width:95%"></div></div>
+              <span>Privilege Escalation</span>
+              <div class="bar"><div style="width:80%"></div></div>
             </div>
 
-        </section>
+            <div class="skill">
+              <span>OSINT</span>
+              <div class="bar"><div style="width:88%"></div></div>
+            </div>
 
-        <section class="card tools-card">
+          </div>
 
+        </div>
+
+      </section>
+
+      <!-- TERMINAL -->
+      <section class="terminal-box">
+
+        <div class="terminal-header">
+          c03e@redteam:~$ whoami
+        </div>
+
+        <div class="terminal-content">
+          <p>red team operator | security researcher</p>
+          <p class="green">mission: secure the digital world</p>
+        </div>
+
+      </section>
+
+      <!-- LOWER GRID -->
+      <section class="lower-grid">
+
+        <!-- ABOUT -->
+        <div class="card large-card">
+          <h3>// ABOUT ME</h3>
+
+          <div class="about-content">
+
+            <div class="about-image"></div>
+
+            <div class="about-text">
+              <p>
+                Red Team Operator and cybersecurity enthusiast
+                focused on offensive security and bypassing defenses.
+              </p>
+
+              <p>
+                I enjoy finding vulnerabilities and helping
+                organizations improve security posture.
+              </p>
+
+              <blockquote>
+                "Offense is the best defense."
+              </blockquote>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="card large-card">
+          <h3>// FEATURED PROJECTS</h3>
+
+          <div class="project-list">
+
+            <div class="project-item">
+              <h4>Active Directory Pentest Lab</h4>
+              <span>VIEW</span>
+            </div>
+
+            <div class="project-item">
+              <h4>Web Application Pentest</h4>
+              <span>VIEW</span>
+            </div>
+
+            <div class="project-item">
+              <h4>Red Team Toolkit</h4>
+              <span>VIEW</span>
+            </div>
+
+            <div class="project-item">
+              <h4>Phishing Simulation Framework</h4>
+              <span>VIEW</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-panel">
+
+          <div class="card">
             <h3>// TOP TOOLS</h3>
 
             <div class="tools-grid">
-                <div>KALI</div>
-                <div>NMAP</div>
-                <div>MSF</div>
-                <div>BURP</div>
-                <div>BLOODHOUND</div>
-                <div>WIRESHARK</div>
+              <div class="tool-box">KALI</div>
+              <div class="tool-box">NMAP</div>
+              <div class="tool-box">MSF</div>
+              <div class="tool-box">BURP</div>
+              <div class="tool-box">BH</div>
+              <div class="tool-box">WIRESHARK</div>
             </div>
+          </div>
 
-        </section>
-
-        <section class="card stats-card">
-
+          <div class="card">
             <h3>// STATS</h3>
 
             <div class="stats-grid">
 
-                <div>
-                    <h2>12</h2>
-                    <p>Writeups</p>
-                </div>
+              <div>
+                <h2>12</h2>
+                <p>Writeups</p>
+              </div>
 
-                <div>
-                    <h2>8</h2>
-                    <p>Projects</p>
-                </div>
+              <div>
+                <h2>8</h2>
+                <p>Projects</p>
+              </div>
 
-                <div>
-                    <h2>25+</h2>
-                    <p>Machines</p>
-                </div>
-
-                <div>
-                    <h2>∞</h2>
-                    <p>Learning</p>
-                </div>
+              <div>
+                <h2>25+</h2>
+                <p>Machines</p>
+              </div>
 
             </div>
 
-        </section>
+          </div>
 
-    </aside>
+        </div>
 
-</div>
+      </section>
 
-<footer>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     STAY CURIOUS. STAY HUNGRY. STAY SILENT.
-</footer>
+  </footer>
 
-<script src="js/app.js"></script>
 </body>
 </html>
