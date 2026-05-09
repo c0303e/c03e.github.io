@@ -1,235 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>C03E | Red Team Operator</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <title>C03E | Red Team Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="background-grid"></div>
-
-<div class="sidebar">
-
-    <div class="profile">
-
-        <div class="avatar"></div>
-
-        <h1>C03E</h1>
-        <span>RED TEAM OPERATOR</span>
-
-    </div>
-
-    <nav>
-
-        <a href="#home">> HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-
-    </nav>
-
-</div>
-
-<div class="main-content">
-
-<header>
-
-    <div class="terminal-title">
-        [ RED TEAM OPERATOR ]
-    </div>
-
-</header>
-
-<section class="hero" id="home">
-
-    <div class="hero-left">
-
-        <h2>Hello, I'm</h2>
-
-        <h1>C03E</h1>
-
-        <h3>Red Team Operator | Pentester</h3>
-
-        <p>
-            Specialized in offensive security,
-            Active Directory attacks,
-            web exploitation and adversary simulation.
-        </p>
-
-        <div class="buttons">
-
-            <button>VIEW PROJECTS</button>
-            <button>CONTACT</button>
-
-        </div>
-
-        <div class="terminal-box">
-
-            <div class="terminal-top">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
+    <div class="app-container">
+        <!-- BARRA LATERAL IZQUIERDA -->
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="https://i.imgur.com/your-hacker-logo.png" alt="Logo" class="main-logo">
+                <h1 class="glitch-text">C03E</h1>
+                <p class="subtitle">RED TEAM OPERATOR</p>
             </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active"><span>>_</span> HOME</a>
+                <a href="#" class="nav-item"><span>[ ]</span> ABOUT</a>
+                <a href="#" class="nav-item"><span>[-]</span> SKILLS</a>
+                <a href="#" class="nav-item"><span>[ ]</span> PROJECTS</a>
+                <a href="#" class="nav-item"><span>[ ]</span> WRITEUPS</a>
+                <a href="#" class="nav-item"><span>[ ]</span> TOOLS</a>
+                <a href="#" class="nav-item"><span>[ ]</span> CONTACT</a>
+            </nav>
+            <div class="access-footer">>> Access granted<span class="cursor">_</span></div>
+        </aside>
 
-            <div class="terminal-body">
+        <!-- CONTENIDO CENTRAL -->
+        <main class="content">
+            <header class="top-bar">
+                <span class="user-shell">c03e@redteam:~#</span>
+                <span class="center-tag">[ RED TEAM OPERATOR ]</span>
+                <div class="top-icons">
+                    <i class="icon-gh"></i> <i class="icon-in"></i> <i class="icon-mail"></i>
+                </div>
+            </header>
 
-                <p class="green-text">
-                    c03e@redteam:~$ whoami
-                </p>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h3>Hello, I'm</h3>
+                    <h2 class="name">C03E<span>_</span></h2>
+                    <h4>Red Team Operator | <span class="highlight">Penetration Tester</span></h4>
+                    <p class="description">I break things to make them stronger. Specialized in offensive security, penetration testing and adversary simulation.</p>
+                    <div class="actions">
+                        <button class="btn btn-red">> VIEW PROJECTS</button>
+                        <button class="btn btn-outline">> CONTACT ME</button>
+                    </div>
+                </div>
 
-                <p>
-                    red team operator
-                </p>
+                <!-- Ventana de Terminal Flotante -->
+                <div class="mini-terminal">
+                    <div class="term-head">
+                        <span>c03e@redteam:~$ whoami</span>
+                        <div class="term-controls"><span>_</span><span>□</span><span>×</span></div>
+                    </div>
+                    <div class="term-body">
+                        <p>red team operator | security researcher | bug hunter</p>
+                        <p class="mission">mission: <span class="green">secure the digital world</span></p>
+                    </div>
+                </div>
+            </section>
 
-                <p>
-                    security researcher
-                </p>
+            <div class="bottom-grid">
+                <div class="panel about-panel">
+                    <h5>// ABOUT ME</h5>
+                    <div class="panel-inner">
+                        <img src="https://i.imgur.com/your-avatar.png" class="avatar">
+                        <div class="text">
+                            <p>Red Team Operator and cybersecurity enthusiast focused on offensive security and passing defenses.</p>
+                            <p class="quote">"Offense is the best defense." <br><span>— Unknown</span></p>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    bug bounty learner
-                </p>
-
-                <br>
-
-                <p class="green-text">
-                    mission: secure the digital world
-                </p>
-
+                <div class="panel projects-panel">
+                    <h5>// FEATURED PROJECTS</h5>
+                    <div class="proj-list">
+                        <div class="proj-item">
+                            <div class="proj-icon">⊞</div>
+                            <div class="proj-info">
+                                <h6>Active Directory Pentest Lab</h6>
+                                <span>Comprehensive AD penetration testing environment.</span>
+                            </div>
+                            <a href="#" class="view-link">> VIEW</a>
+                        </div>
+                        <!-- Repetir para otros proyectos -->
+                    </div>
+                </div>
             </div>
+        </main>
 
-        </div>
+        <!-- PANEL DERECHO (Habilidades y Stats) -->
+        <aside class="right-panel">
+            <section class="skills-section">
+                <h5>// SKILLS</h5>
+                <div class="skill-group">
+                    <div class="skill-info"><span>Web Exploitation</span><span>90%</span></div>
+                    <div class="progress-bg"><div class="progress-fill" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-info"><span>Network Exploitation</span><span>85%</span></div>
+                    <div class="progress-bg"><div class="progress-fill" style="width: 85%"></div></div>
+                </div>
+                <!-- Agregar el resto... -->
+            </section>
 
+            <section class="tools-section">
+                <h5>// TOP TOOLS</h5>
+                <div class="tools-grid">
+                    <div class="tool"><img src="kali.png"><span>KALI</span></div>
+                    <div class="tool"><img src="nmap.png"><span>NMAP</span></div>
+                    <div class="tool"><img src="metasploit.png"><span>MSF</span></div>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <h5>// STATS</h5>
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>12</h3><p>Writeups</p></div>
+                    <div class="stat-card"><h3>8</h3><p>Projects</p></div>
+                    <div class="stat-card"><h3>25+</h3><p>Machines</p></div>
+                    <div class="stat-card"><h3>∞</h3><p>Learning</p></div>
+                </div>
+            </section>
+        </aside>
     </div>
 
-    <div class="hero-right">
-
-        <div class="map"></div>
-
-    </div>
-
-</section>
-
-<section id="skills">
-
-    <h2>// SKILLS</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Web Exploitation</h3>
-            <div class="bar"><span style="width:90%"></span></div>
-        </div>
-
-        <div class="card">
-            <h3>Active Directory</h3>
-            <div class="bar"><span style="width:85%"></span></div>
-        </div>
-
-        <div class="card">
-            <h3>OSINT</h3>
-            <div class="bar"><span style="width:80%"></span></div>
-        </div>
-
-        <div class="card">
-            <h3>Privilege Escalation</h3>
-            <div class="bar"><span style="width:88%"></span></div>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="projects">
-
-    <h2>// PROJECTS</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-
-            <h3>Active Directory Lab</h3>
-
-            <p>
-                Enterprise AD attack simulation environment.
-            </p>
-
-        </div>
-
-        <div class="project-card">
-
-            <h3>Web Pentest Research</h3>
-
-            <p>
-                Modern web application exploitation and testing.
-            </p>
-
-        </div>
-
-        <div class="project-card">
-
-            <h3>Red Team Toolkit</h3>
-
-            <p>
-                Offensive security scripts and automation.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="about">
-
-    <h2>// ABOUT ME</h2>
-
-    <div class="about-box">
-
-        <p>
-            Cybersecurity enthusiast focused on offensive security,
-            red teaming and adversary simulation.
-        </p>
-
-        <br>
-
-        <p class="quote">
-            "Offense is the best defense."
-        </p>
-
-    </div>
-
-</section>
-
-<section id="contact">
-
-    <h2>// CONTACT</h2>
-
-    <div class="contact-box">
-
-        <p>Email: c03e@redteam.local</p>
-
-        <p>GitHub: github.com/xC03Ex</p>
-
-    </div>
-
-</section>
-
-<footer>
-
-    STAY CURIOUS. STAY HUNGRY. STAY SILENT.
-
-</footer>
-
-</div>
-
-<script src="script.js"></script>
-
+    <footer class="main-footer">
+        <div class="footer-left">c03e@redteam:~$</div>
+        <div class="footer-center">STAY CURIOUS. STAY HUNGRY. STAY SILENT.</div>
+        <div class="footer-right">© 2024 C03E | All rights reserved</div>
+    </footer>
 </body>
 </html>
