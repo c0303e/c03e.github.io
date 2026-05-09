@@ -4,88 +4,125 @@
     --red-main: #ff0505;
     --red-glow: rgba(255, 5, 5, 0.4);
     --text-gray: #a0a0a0;
-    --font-main: 'Fira Code', monospace;
+    --font-mono: 'Fira Code', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--bg-black);
     color: white;
-    margin: 0;
-    font-family: var(--font-main);
-    overflow: hidden; /* Mantiene el layout fijo como una app */
-}
-
-.app-container {
-    display: grid;
-    grid-template-columns: 220px 1fr 300px;
+    font-family: var(--font-mono);
     height: 100vh;
-    padding-bottom: 40px;
+    overflow: hidden; /* Evita que aparezcan barras de scroll */
+    display: flex;
 }
 
-/* Fondo de Mapa (Efecto de la imagen) */
-.content {
-    background-image: url('https://i.imgur.com/world-map-dots.png'); /* Busca un "dotted world map png" */
-    background-size: 70%;
-    background-position: top right;
-    background-repeat: no-repeat;
-    border-left: 1px solid #1a1a1a;
-    padding: 20px 40px;
-}
-
-/* Estilo de Paneles */
-.panel {
-    background: rgba(13, 13, 13, 0.8);
-    border: 1px solid #1a1a1a;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-h5 { color: var(--red-main); margin-bottom: 15px; letter-spacing: 1px; }
-
-/* Efecto de Brillo en Barras de Progreso */
-.progress-fill {
+/* 1. BARRA LATERAL IZQUIERDA */
+.sidebar {
+    width: 200px;
     height: 100%;
-    background: var(--red-main);
-    box-shadow: 0 0 12px var(--red-glow);
+    border-right: 1px solid #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Botones con estilo Terminal */
-.btn {
-    border: 1px solid var(--red-main);
-    padding: 10px 25px;
-    background: transparent;
-    color: var(--red-main);
-    font-family: var(--font-main);
-    cursor: pointer;
+.brand { text-align: center; margin-bottom: 40px; }
+.brand h1 { color: var(--red-main); font-size: 2rem; letter-spacing: 2px; }
+.brand p { font-size: 0.6rem; color: var(--text-gray); }
+
+.nav-menu { flex-grow: 1; }
+.nav-item {
+    display: block;
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 12px 0;
     transition: 0.3s;
 }
+.nav-item.active, .nav-item:hover { color: var(--red-main); }
 
+/* 2. CONTENEDOR CENTRAL */
+.content {
+    flex: 1;
+    position: relative;
+    padding: 40px;
+    background-image: radial-gradient(circle at top right, #1a0505 0%, transparent 40%);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 60px;
+}
+
+.hero-content h3 { font-weight: 300; font-size: 1.2rem; }
+.hero-content h2 { font-size: 4rem; margin: -10px 0; }
+.hero-content h2 span { color: var(--red-main); }
+.hero-content h4 { color: var(--text-gray); margin-bottom: 20px; }
+.hero-content h4 span { color: var(--red-main); }
+.hero-content p.description { max-width: 450px; font-size: 0.85rem; line-height: 1.5; color: #ccc; }
+
+.actions { margin-top: 30px; }
+.btn {
+    background: transparent;
+    border: 1px solid var(--red-main);
+    color: var(--red-main);
+    padding: 10px 20px;
+    font-family: var(--font-mono);
+    margin-right: 15px;
+    cursor: pointer;
+}
 .btn-red { background: rgba(255, 5, 5, 0.1); }
-.btn-red:hover { background: var(--red-main); color: black; }
 
-/* Stats */
-.stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+/* 3. PANEL DERECHO (IMPORTANTE) */
+.right-panel {
+    width: 320px;
+    height: 100%;
+    border-left: 1px solid #1a1a1a;
+    padding: 20px;
+    background: #080808;
 }
-.stat-card {
-    text-align: center;
-    border: 1px solid #1a1a1a;
-    padding: 15px 5px;
-}
-.stat-card h3 { font-size: 1.8rem; color: white; }
-.stat-card p { font-size: 0.7rem; color: var(--text-gray); }
 
-/* Footer Fijo */
+h5 { color: var(--red-main); font-size: 0.9rem; margin: 20px 0 10px 0; }
+
+.skill-group { margin-bottom: 15px; }
+.skill-info { display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 5px; }
+.progress-bg { height: 3px; background: #222; width: 100%; }
+.progress-fill { height: 100%; background: var(--red-main); box-shadow: 0 0 8px var(--red-glow); }
+
+/* 4. TERMINAL (Posicionada como en la imagen) */
+.mini-terminal {
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    width: 500px;
+    background: #000;
+    border: 1px solid #222;
+}
+.term-head { background: #111; padding: 5px 10px; font-size: 0.7rem; display: flex; justify-content: space-between; }
+.term-body { padding: 15px; font-size: 0.8rem; }
+.green { color: #00ff00; }
+
+/* 5. FOOTER */
 .main-footer {
     position: fixed;
-    bottom: 0; width: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: #000;
     border-top: 1px solid #1a1a1a;
     display: flex;
     justify-content: space-between;
-    padding: 8px 20px;
-    font-size: 0.75rem;
+    padding: 5px 20px;
+    font-size: 0.7rem;
     color: var(--text-gray);
+    z-index: 100;
 }
